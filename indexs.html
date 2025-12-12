@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蛊脚本官网</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f0f2f5;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 450px;
+            width: 100%;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+        .header-card {
+            background: linear-gradient(90deg, #6200ee 0%, #2196f3 100%);
+            color: #fff;
+            padding: 35px 20px;
+            text-align: center;
+        }
+        .header-card h1 {
+            font-size: 26px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        .header-card p {
+            font-size: 14px;
+            opacity: 0.9;
+            letter-spacing: 0.5px;
+        }
+        .btn-container {
+            padding: 25px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 20px 0;
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            position: relative;
+            transition: opacity 0.2s;
+        }
+        .btn::before {
+            content: "";
+            position: absolute;
+            left: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 26px;
+            height: 26px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .copy-btn {
+            background-color: #ff3d00;
+        }
+        .copy-btn::before {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z'/%3E%3C/svg%3E");
+        }
+        .qq1-btn {
+            background: linear-gradient(90deg, #ff7043 0%, #ffab91 100%);
+        }
+        .qq2-btn {
+            background: linear-gradient(90deg, #26a69a 0%, #00897b 100%);
+        }
+        .qq1-btn::before,
+        .qq2-btn::before {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M18.75 12c0-3.72-2.94-6.75-6.75-6.75S5.25 8.28 5.25 12 8.19 18.75 12 18.75 18.75 15.72 18.75 12zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm-1-8h2v4h-2zm0 6h2v2h-2z'/%3E%3C/svg%3E");
+        }
+        #copyTip {
+            text-align: center;
+            color: #2e7d32;
+            margin: -8px 0 8px 0;
+            font-size: 14px;
+            display: none;
+            pointer-events: none;
+        }
+        .hidden-text {
+            position: absolute;
+            left: -9999px;
+            top: -9999px;
+            width: 1px;
+            height: 1px;
+            opacity: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-card">
+            <h1>欢迎访问蛊脚本官网</h1>
+            <p>蛊脚本免费，放心使用！</p>
+        </div>
+        <div class="btn-container">
+            <textarea class="hidden-text" id="script">loadstring(game:HttpGet("https://raw.githubusercontent.com/sdxs221/-/main/爱别离"))()</textarea>
+            <button class="btn copy-btn" id="copyBtn">点击复制蛊脚本</button>
+            <p id="copyTip">脚本已复制到剪贴板！</p>
+            <a href="https://qun.qq.com/universal-share/share?ac=1&authKey=%2B%2FF8YMqXi35%2FrsXNDtgsrGKcXzsbikEDFGqmXd8jPNeUlLWQ0cn2iO6vRLKR7%2BiP&busi_data=eyJncm91cENvZGUiOiIxMDQ1MDQ1MTg4IiwidG9rZW4iOiJtTHpHMmRvelh3NWRFOVQ2cllkbjhJRTVDeTN1YkNyeGRkNDBRQUtEK0tvN0RNN1NrSnNNemxVeEIyWG9jYmVJIiwidWluIjoiMzEyNjI5NTIwNSJ9&data=M7TounkWlJca-T7-jTIpaf-Odz5pTfwZIAcoCMSirw1GGGiA48H3v8SiD04RmbcLUAEunIJAkWerBFoVOwEotg&svctype=4&tempid=h5_group_info" target="_blank" class="btn qq1-btn">QQ蛊脚本一群</a>
+
+        </div>
+    </div>
+    <script>
+        const copyBtn = document.getElementById("copyBtn");
+        const scriptText = document.getElementById("script");
+        const copyTip = document.getElementById("copyTip");
+        copyBtn.addEventListener("click", function() {
+            scriptText.focus();
+            scriptText.select();
+            scriptText.setSelectionRange(0, scriptText.value.length);
+            document.execCommand("copy");
+            copyTip.style.display = "block";
+            setTimeout(function() {
+                copyTip.style.display = "none";
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
