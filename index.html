@@ -1,1 +1,82 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>空云脚本交流群</title><style>*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}body{background-color:#f0f2f5;min-height:100vh;display:flex;justify-content:center;align-items:center;/* 核心：垂直水平居中 */padding:20px;/* 防止手机端贴边 */}.container{max-width:450px;width:100%;/* 适配手机宽度 */background:#fff;border-radius:16px;box-shadow:0 2px 10px rgba(0,0,0,0.05);overflow:hidden}.header-card{background:linear-gradient(90deg,#6200ee 0%,#2196f3 100%);color:#fff;padding:35px 20px;text-align:center}.header-card h1{font-size:26px;margin-bottom:12px;font-weight:600}.header-card p{font-size:14px;opacity:0.9;letter-spacing:0.5px}.btn-container{padding:25px 20px;display:flex;flex-direction:column;gap:12px}.btn{display:block;width:100%;padding:20px 0;border:none;border-radius:12px;font-size:18px;font-weight:600;color:#fff;text-align:center;text-decoration:none;cursor:pointer;position:relative;transition:opacity 0.2s}.btn::before{content:"";position:absolute;left:25px;top:50%;transform:translateY(-50%);width:26px;height:26px;background-size:contain;background-repeat:no-repeat}.copy-btn{background-color:#ff3d00;}.copy-btn::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z'/%3E%3C/svg%3E")}.qq1-btn{background:linear-gradient(90deg,#ff7043 0%,#ffab91 100%);}.qq2-btn{background:linear-gradient(90deg,#26a69a 0%,#00897b 100%);}.qq1-btn::before,.qq2-btn::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M18.75 12c0-3.72-2.94-6.75-6.75-6.75S5.25 8.28 5.25 12 8.19 18.75 12 18.75 18.75 15.72 18.75 12zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm-1-8h2v4h-2zm0 6h2v2h-2z'/%3E%3C/svg%3E")}#copyTip{text-align:center;color:#2e7d32;margin:-8px 0 8px 0;font-size:14px;display:none;pointer-events:none}.hidden-text{position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;opacity:0;pointer-events:none}</style></head><body><div class="container"><div class="header-card"><h1>欢迎访问空云脚本官网</h1><p>空云脚本免费，没有抓包，放心使用！</p></div><div class="btn-container"><textarea class="hidden-text" id="script">loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\120\105\97\111\83\66\51\51\47\77\52\49\54\47\114\101\102\115\47\104\101\97\100\115\47\109\97\105\110\47\87\105\110\100\47\115\98\47\231\169\186\228\186\145\232\132\154\230\156\172\86\51\46\76\85\65",true))()</textarea><button class="btn copy-btn" id="copyBtn">点击复制空云脚本V3</button><p id="copyTip">脚本已复制到剪贴板！</p><a href="https://qm.qq.com/q/MdfSEOZJgQ" target="_blank" class="btn qq1-btn">QQ云脚本一群（非作者）</a><a href="https://qm.qq.com/q/9mBw7eXT0s" target="_blank" class="btn qq2-btn">QQ云脚本二群（非作者）</a></div></div><script>(function(){var t=document.getElementById("copyBtn"),s=document.getElementById("script"),p=document.getElementById("copyTip");t.onclick=function(){s.focus();s.select();s.setSelectionRange(0,s.value.length);document.execCommand("copy");p.style.display="block";setTimeout(function(){p.style.display="none"},2000)}})();</script></body></html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>空云脚本工具</title>
+<style>
+* {margin:0;padding:0;box-sizing:border-box;}
+body {background:linear-gradient(135deg,#1a1a2e,#16213e);min-height:100vh;display:flex;justify-content:center;align-items:center;font-family:Arial,sans-serif;}
+.container {background:rgba(255,255,255,0.08);backdrop-filter:blur(10px);padding:30px;border-radius:15px;box-shadow:0 8px 32px rgba(0,0,0,0.3);width:90%;max-width:500px;text-align:center;}
+.title {color:#fff;font-size:24px;margin-bottom:25px;font-weight:600;}
+.btn {padding:12px 25px;border:none;border-radius:8px;font-size:16px;cursor:pointer;margin:10px 5px;transition:all 0.3s ease;}
+.copy-btn {background:linear-gradient(90deg,#4361ee,#3a0ca3);color:#fff;}
+.copy-btn:hover {transform:scale(1.05);box-shadow:0 4px 15px rgba(67,97,238,0.4);}
+.qq1-btn {background:linear-gradient(90deg,#1da1f2,#0d9488);color:#fff;}
+.qq1-btn:hover {transform:scale(1.05);box-shadow:0 4px 15px rgba(29,161,242,0.4);}
+.qq2-btn {background:linear-gradient(90deg,#ff7e5f,#feb47b);color:#fff;}
+.qq2-btn:hover {transform:scale(1.05);box-shadow:0 4px 15px rgba(255,126,95,0.4);}
+.key-btn {background:linear-gradient(90deg,#4CAF50,#2e7d32);color:#fff;}
+.key-btn:hover {transform:scale(1.05);box-shadow:0 4px 15px rgba(76,175,80,0.4);}
+.script-box {background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:20px;margin:20px 0;text-align:left;color:#e0e0e0;max-height:300px;overflow-y:auto;white-space:pre-wrap;word-wrap:break-word;}
+.toast {position:fixed;top:20px;left:50%;transform:translateX(-50%);padding:12px 20px;border-radius:8px;font-size:16px;z-index:9999;opacity:0;transition:opacity 0.3s ease;}
+.copy-toast {background:rgba(76,175,80,0.9);color:#fff;}
+.key-toast {background:rgba(76,175,80,0.9);color:#fff;}
+.toast.show {opacity:1;}
+</style>
+</head>
+<body>
+<div class="container">
+<h1 class="title">空云脚本工具</h1>
+<div class="script-box" id="scriptContent">-- 空云脚本核心代码（替换为你的脚本内容）
+print("空云脚本加载成功")
+-- 脚本功能逻辑可在此扩展</div>
+<button class="btn copy-btn" onclick="copyScript()">复制脚本</button>
+<button class="btn qq1-btn" onclick="jumpQQGroup1()">加入一群</button>
+<button class="btn qq2-btn" onclick="jumpQQGroup2()">加入二群</button>
+<button class="btn key-btn" onclick="getRandomKey()">随机获取卡密</button>
+</div>
+<div class="toast copy-toast" id="copyToast">脚本已复制到剪贴板</div>
+<div class="toast key-toast" id="keyToast">卡密已自动复制到剪贴板</div>
+<script>
+const scriptContent = document.getElementById("scriptContent");
+const copyToast = document.getElementById("copyToast");
+const keyToast = document.getElementById("keyToast");
+function copyScript() {
+navigator.clipboard.writeText(scriptContent.textContent).then(()=>{
+copyToast.classList.add("show");
+setTimeout(()=>copyToast.classList.remove("show"),2000);
+}).catch(()=>{
+copyToast.textContent="复制失败，请手动复制";
+copyToast.classList.add("show");
+setTimeout(()=>copyToast.classList.remove("show"),2000);
+});
+}
+function jumpQQGroup1() {
+window.open("https://qm.qq.com/cgi-bin/qm/qr?k=一群密钥&noverify=0&personal_qrcode=0","_blank");
+}
+function jumpQQGroup2() {
+window.open("https://qm.qq.com/cgi-bin/qm/qr?k=二群密钥&noverify=0&personal_qrcode=0","_blank");
+}
+function getRandomKey() {
+const keyUrl = "https://github.com/xiaoSB33/M416/raw/main/Wind%2Fsb%2Fkeys.txt";
+fetch(keyUrl).then(response=>{
+if(!response.ok) throw new Error("卡密加载失败，请检查网络后重试");
+return response.text();
+}).then(text=>{
+const keyList = text.split("\n").map(key=>key.trim()).filter(key=>key && key.includes("-") && key.split("-").length === 4);
+if(keyList.length === 0) throw new Error("未获取到有效卡密");
+const randomKey = keyList[Math.floor(Math.random() * keyList.length)];
+navigator.clipboard.writeText(randomKey).then(()=>{
+keyToast.classList.add("show");
+setTimeout(()=>keyToast.classList.remove("show"),2000);
+}).catch(()=>{
+alert("卡密获取成功，但自动复制失败，请手动复制");
+});
+}).catch(error=>{
+alert(error.message);
+});
+}
+</script>
+</body>
+</html>
